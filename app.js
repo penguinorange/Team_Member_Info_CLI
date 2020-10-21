@@ -40,13 +40,13 @@ function appMenu() {
                     if (pass) {
                         return true;
                     }
-                    return "You must enter a number greater than zero";
+                    return "You must enter a number";
                 }
             },
             {
                 type: "input",
                 name: "managerEmail",
-                message: "What is your manager's email?",
+                message: "What is manager's email?",
                 validate: answer => {
                     const pass = answer.match(
                         /\S+@\S+\.\S+/
@@ -54,13 +54,13 @@ function appMenu() {
                     if (pass) {
                         return true;
                     }
-                    return "Please enter a valid email address";
+                    return "Please enter a valid email";
                 }
             },
             {
                 type: "input",
                 name: "officeNumber",
-                message: "What is your phone number?",
+                message: "What is the manager's phone number?",
                 validate: answer => {
                     const pass = answer.match(
                         /^[1-9]\d*$/
@@ -68,7 +68,7 @@ function appMenu() {
                     if (pass) {
                         return true;
                     }
-                    return "Please enter a number greater than zero";
+                    return "Please only enter numbers";
                 }
             }
         ]).then(answers => {
@@ -85,7 +85,7 @@ function appMenu() {
             {
                 type: "list",
                 name: "memberChoice",
-                message: "which type of team member would you like to add?",
+                message: "what kind of team member are you adding?",
                 choices: [
                     "Engineer",
                     "Intern",
@@ -111,7 +111,7 @@ function appMenu() {
             {
                 type: "input",
                 name: "engineerName",
-                message: "What is your engineer's name?",
+                message: "What is the engineer's name?",
                 validate: answers => {
                     if (answers !== "") {
                         return true;
@@ -122,7 +122,7 @@ function appMenu() {
             {
                 type: "input",
                 name: "engineerId",
-                message: "What is the engineer ID?",
+                message: "What is the engineer's ID?",
                 validate: answer => {
                     const pass = answer.match(
                         /^[1-9]\d*$/
@@ -141,7 +141,7 @@ function appMenu() {
             {
                 type: "input",
                 name: "engineerEmail",
-                message: "What is your engineer's email address?",
+                message: "What is the engineer's email address?",
                 validate: answer => {
                     const pass = answer.match(
                         /\S+@\S+\.\S+/
@@ -149,7 +149,7 @@ function appMenu() {
                     if (pass) {
                         return true;
                     }
-                    return "Please enter a valid email address";
+                    return "Please enter a valid email";
                 }
             },
             {
@@ -205,7 +205,7 @@ function appMenu() {
             {
                 type: "input",
                 name: "internEmail",
-                message: "What is your intern's email?",
+                message: "What is the intern's email?",
                 validate: answer => {
                     const pass = answer.match(
                         /\S+@\S+\.\S+/
@@ -213,13 +213,13 @@ function appMenu() {
                     if (pass) {
                         return true;
                     }
-                    return "Please enter a valid email address";
+                    return "Please enter a valid email";
                 }
             },
             {
                 type: "input",
                 name: "internSchool",
-                message: "What school is your intern from?",
+                message: "What school is the intern from?",
                 validate: answer => {
                     if (answer !== "") {
                         return true;
